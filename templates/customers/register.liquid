@@ -1,0 +1,28 @@
+<!-- /templates/customers/register.liquid -->
+<h1 class="small--text-center">Oh good, so you’re getting onboard with us!</h1>
+
+<div class="form-register form-vertical">
+  {% form 'create_customer' %}
+
+    {{ form.errors | default_errors }}
+
+    <label for="FirstName" class="label--hidden">{{ 'customer.register.first_name' | t }}</label>
+    <input type="text" name="customer[first_name]" id="FirstName" placeholder="Tell us your First Name" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+
+    <label for="LastName" class="label--hidden">{{ 'customer.register.last_name' | t }}</label>
+    <input type="text" name="customer[last_name]" id="LastName" placeholder="Also your Last name" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+
+    <label for="Email" class="label--hidden">{{ 'customer.register.email' | t }}</label>
+    <input type="email" name="customer[email]" id="Email" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="You must have an email id too" {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+
+    <label for="CreatePassword" class="label--hidden">{{ 'customer.register.password' | t }}</label>
+    <input type="password" name="customer[password]" id="CreatePassword" class="{% if form.errors contains 'password' %} input--error{% endif %}" placeholder="Enter 6-8 hush hush characters" minlength="6" maxlength="8">
+	
+    <p>
+      {% assign customer[password] = "password" %}
+  <h1>{{ customer.register.first_name }}</h1>
+      <input type="submit" value="Let’s start pinning!" class="btn">
+    </p>
+
+  {% endform %}
+</div>

@@ -1,0 +1,26 @@
+﻿Windows Installation
+
+Run the following commands in Powershell as Administrator.
+
+=> (New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/Shopify/themekit/master/scripts/install.ps1") | powershell -command -
+
+=> set the permissions of Theme templates and theme assets to have Read and write access.
+
+Use a new theme.
+=> theme bootstrap --password=[your-password] --store=[your-store.myshopify.com]
+
+Configure an existing theme.
+
+# create configuration
+=> theme configure --password=[03be0dfe12edb44fb917d56e0ff278f8] --store=[say-it-with-a-pin.myshopify.com] --themeid=[14540275777]
+
+# download and setup project in the current directory
+=> theme download 
+
+
+
+Upload
+=> theme upload templates/404.liquid templates/article.liquid
+
+Open 
+=> theme open
