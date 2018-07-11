@@ -24,3 +24,17 @@ Upload
 
 Open 
 => theme open
+
+
+development:
+  password: 03be0dfe12edb44fb917d56e0ff278f8
+  theme_id: "14540275777"
+  store: say-it-with-a-pin.myshopify.com
+
+
+
+
+development:
+  password: 6c5263b5668c8ec31046d20d2cd7a2a6
+  theme_id: "28166455411"
+  store: siwap-dev.myshopify.com

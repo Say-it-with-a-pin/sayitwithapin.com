@@ -1,1 +1,49 @@
-<style>.mp-loader { position: fixed; background: rgba(255, 255, 255, 0.6); top: 0; left: 0; bottom: 0; right: 0; z-index: 1100} .mp-loader .mp-spinner { width: 52px; height: 52px; border: 4px solid #cccccc; border-radius: 50%; animation: mp-spin 460ms infinite linear; -o-animation: mp-spin 460ms infinite linear; -ms-animation: mp-spin 460ms infinite linear; -webkit-animation: mp-spin 460ms infinite linear; -moz-animation: mp-spin 460ms infinite linear; border-color: #555555 #cccccc; position: absolute; left: 50%; top: 50%; margin-left: -26px; margin-top: -26px; } .mp-loader .title-text { position: absolute; text-align: center !important; top: 56%; width: 100%; } @keyframes mp-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } @-o-keyframes mp-spin { from { -o-transform: rotate(0deg); } to { -o-transform: rotate(360deg); } } @-ms-keyframes mp-spin { from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); } } @-webkit-keyframes mp-spin { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); } } @-moz-keyframes mp-spin { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); } }</style><div class='rte'><div class='mp_sp_page' data-cust='{{ customer.id }}'></div></div><div class='mp-loader'><div class='mp-spinner'></div><div class='title-text'>Please Wait...</div></div>
+<style>.mp-loader { position: fixed; background: rgba(255, 255, 255, 0.6); top: 0; left: 0; bottom: 0; right: 0; z-index: 1100} .mp-loader .mp-spinner { width: 52px; height: 52px; border: 4px solid #cccccc; border-radius: 50%; animation: mp-spin 460ms infinite linear; -o-animation: mp-spin 460ms infinite linear; -ms-animation: mp-spin 460ms infinite linear; -webkit-animation: mp-spin 460ms infinite linear; -moz-animation: mp-spin 460ms infinite linear; border-color: #555555 #cccccc; position: absolute; left: 50%; top: 50%; margin-left: -26px; margin-top: -26px; } .mp-loader .title-text { position: absolute; text-align: center !important; top: 56%; width: 100%; } @keyframes mp-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } @-o-keyframes mp-spin { from { -o-transform: rotate(0deg); } to { -o-transform: rotate(360deg); } } @-ms-keyframes mp-spin { from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); } } @-webkit-keyframes mp-spin { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); } } @-moz-keyframes mp-spin { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); } }</style>
+
+<!--<div class='rte'>
+		<div class='mp_sp_page' data-cust='{{ customer.id }}'></div>
+	</div>
+<div class='mp-loader'>
+	<div class='mp-spinner'></div>
+	<div class='title-text'>Loading...</div>
+</div>
+-->
+
+
+<div class='artist-page container mt-5'>
+	{% for product_vendor in shop.vendors %}
+				{% for collection in collections %}
+					{% if collection.title == product_vendor%}
+				<div class="row">
+							<div class="col-6 col-md-2 p-0 pb-2 text-center">
+								<img style="max-width:100%;height:auto" src="{{ collection.image.src | collection_img_url: 'small' }}" alt="{{ collection.image.alt }}" />
+							</div>
+							<div class="col-6 col-md-2 p-0 pb-2">
+								<p class="font-weight-bold">{{ product_vendor | link_to_vendor }}</p>
+								<p>{{ collection.description }}</p>
+							</div>
+							<div class="col-12 col-md-8 p-0 bg-light">
+								<div class="py-2">
+									{% paginate collection.products by 5 %}
+										{% for product in collection.products %}
+											<a href="{{product.url}}">
+												<img style="width:90px;height:auto" src="{{ product.images.first.src | product_img_url: 'small' }}" alt="{{ product.image.alt }}" />
+											</a>
+										{% endfor %}
+									{% endpaginate %}
+								</div>
+							</div>
+						</div>
+						<hr/>	
+						{% comment %}
+							{{ collections[product_vendor].image | collection_img_url: 'large' | img_tag }}
+						{% endcomment %}
+					{% endif %}
+				{% endfor %}	
+	{% endfor %}
+</div>
+
+<div class="wk_seller_detail_logo" data-productid ="{{product.id}}"></div>
+
+
+
