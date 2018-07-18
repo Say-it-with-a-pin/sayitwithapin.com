@@ -25,6 +25,9 @@ Upload
 Open 
 => theme open
 
+Deploy
+=> theme watch
+
 
 development:
   password: 03be0dfe12edb44fb917d56e0ff278f8

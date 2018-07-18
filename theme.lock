@@ -108,7 +108,7 @@ sections/product-template.liquid:
 sections/sidebar-1.liquid:
   development: 2018-07-09T04:16:51-04:00   191ea17f1b880e66110e9252aadd2719
 sections/sidebar.liquid:
-  development: 2018-07-09T04:16:56-04:00   641c37942a12cb4c061bd190eafee8fb
+  development: 2018-07-18T11:43:04+05:30   0f10daca389080f39dab0bbfb6e7f6c7
 sections/slideshow.liquid:
   development: 2018-07-09T04:17:39-04:00   8b5417e16783b70c40c45a907d1fc2b3
 snippets/bgset.liquid:
@@ -272,7 +272,7 @@ templates/page.contact.liquid:
 templates/page.liquid:
   development: 2018-07-09T04:16:40-04:00   e1b64d2499164dede0a7c6df21b03f9c
 templates/page.mp_seller_profile.liquid:
-  development: 2018-07-11T18:19:16+05:30   893e0cf6f02dc9d786a4283554f2d939
+  development: 2018-07-11T18:52:53+05:30   0f6bd6808c513ed498afdb32e383a890
 templates/password.liquid:
   development: 2018-07-09T04:17:04-04:00   197aff54ed6868121a8feaa8b77f94e6
 templates/product.liquid:

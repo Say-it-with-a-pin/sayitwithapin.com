@@ -14,7 +14,7 @@
 	{% for product_vendor in shop.vendors %}
 				{% for collection in collections %}
 					{% if collection.title == product_vendor%}
-				<div class="row">
+						<div class="row">
 							<div class="col-6 col-md-2 p-0 pb-2 text-center">
 								<img style="max-width:100%;height:auto" src="{{ collection.image.src | collection_img_url: 'small' }}" alt="{{ collection.image.alt }}" />
 							</div>
@@ -35,9 +35,6 @@
 							</div>
 						</div>
 						<hr/>	
-						{% comment %}
-							{{ collections[product_vendor].image | collection_img_url: 'large' | img_tag }}
-						{% endcomment %}
 					{% endif %}
 				{% endfor %}	
 	{% endfor %}
