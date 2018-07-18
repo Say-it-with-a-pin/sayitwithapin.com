@@ -79,12 +79,15 @@
       <div class="product-single__meta small--text-center">
         <h1 class="product-single__title" itemprop="name">{{ product.title }}</h1>
         
+        {% if product.vendor != 'Say it with a Pin' %}
+          <p>Designed By <span class="font-weight-bold">{{ product.vendor | link_to_vendor }}</span></p>
+        {% endif %}
         <!-- Custom changes -->
         {% if section.settings.product_description_position == 'right' %}
           {%- assign position = 'right' -%}
           {% include 'product-description' %}
         {% endif %}
- 		<!-- /Custom changes -->
+ 		    <!-- /Custom changes -->
 
         {% if section.settings.vendor_show %}
           <p class="product-single__vendor" itemprop="brand">{{ product.vendor }}</p>
@@ -146,12 +149,6 @@
 
         </div>
 		
-        <!-- Custom changes -->
-        
-        <!-- Description code -->
-        
- 		<!-- /Custom changes -->
-        
         {% if section.settings.social_sharing_products %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
         {% endif %}

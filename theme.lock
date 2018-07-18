@@ -104,7 +104,7 @@ sections/password-content.liquid:
 sections/password-header.liquid:
   development: 2018-07-09T04:16:52-04:00   0dabed945442c440027e199baefc71fa
 sections/product-template.liquid:
-  development: 2018-07-09T04:16:55-04:00   29145db5f459fad0300af325b65d05ae
+  development: 2018-07-18T12:40:12+05:30   56ac361edea137a25644c9740e1fd606
 sections/sidebar-1.liquid:
   development: 2018-07-09T04:16:51-04:00   191ea17f1b880e66110e9252aadd2719
 sections/sidebar.liquid:
