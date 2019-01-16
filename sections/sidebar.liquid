@@ -68,7 +68,7 @@
           {% else %}
             <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}">
               <a href="{{ link.url }}" class="site-nav__link {% if link.title == 'The Pin Collective'%} font-weight-bold {% endif %}"{% if link.active %} aria-current="page"{% endif %}>
-								{{ link.title | escape }}	 {% if link.title == 'The Pin Collective'%} <span class="badge badge-danger mx-2 my-1">New</span> {% endif %}
+								{{ link.title | escape }}	 
 							</a>
             </li>
           {% endif %}
