@@ -38,11 +38,11 @@ assets/scasp-pickup-icon.png:
 assets/scasp-shipping-icon.png:
   development: 2018-07-09T04:16:49-04:00   17c9bf5b7cca3c9695f2a17a12ede984
 assets/theme.css:
-  development: 2018-07-11T18:12:47+05:30   95519a57fe0b85c7fb8a7db4822f7c78
+  development: 2019-01-16T15:44:28+05:30   07292aeee0b183279dc622388b117ae4
 assets/theme.js.liquid:
   development: 2018-07-09T04:17:42-04:00   91e17e117c95bb38e0623aa0619755a4
 assets/theme.scss.liquid:
-  development: 2018-07-09T04:16:59-04:00   868059e209f23220e0c8f539eb0b1521
+  development: 2019-01-16T16:01:40+05:30   d75b3dc750b30744ada20d5846d2bcf9
 config/settings_data.json:
   development: 2018-06-15T16:58:03+05:30   e1c99e7810d6103d972187d9be82b99d
 config/settings_schema.json:
@@ -74,7 +74,7 @@ sections/article-template.liquid:
 sections/collection-list.liquid:
   development: 2018-07-09T04:17:09-04:00   4dfd594ea81e17f71b51ac81ee3bebe7
 sections/collection-template.liquid:
-  development: 2018-07-09T04:17:24-04:00   4a38d8b8467f427dd4c3b233d0ab5cdd
+  development: 2019-01-16T15:22:40+05:30   58281f0febfc4ca6acab1f0a4691e95d
 sections/featured-banner.liquid:
   development: 2018-07-09T04:16:44-04:00   a0b63a5bd23c838afeea8965b66442a6
 sections/featured-blog.liquid:
